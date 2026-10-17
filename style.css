@@ -1,0 +1,15 @@
+p {
+  color: #444;
+  line-height: 1.6;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+body{
+    background: greenyellow;
+    font-family: Arial, sans-serif;
+}
