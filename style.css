@@ -1,15 +1,308 @@
-p {
-  color: #444;
-  line-height: 1.6;
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-.navbar{
+body {
+    background: #26343A;
+    font-family: Arial, sans-serif;
+    color: #EAE5D9;
+}
+
+p {
+    color: #B9C2C0;
+    line-height: 1.8;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 4% 20px 8%;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
+    background: rgba(38, 52, 58, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #405158;
+    z-index: 1000;
 }
 
-body{
-    background: greenyellow;
-    font-family: Arial, sans-serif;
+/* LOGO */
+.logo {
+    color: #EAE5D9;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    gap: 35px;
+    margin-left: auto;
+}
+
+.navbar a {
+    color: #B9C2C0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #8BA3A6;
+}
+
+/* NAVBAR UNDERLINE */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #8BA3A6;
+    transition: 0.3s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* SECTION */
+section {
+    min-height: 100vh;
+    padding: 120px 8% 80px;
+}
+
+section h1 {
+    font-size: 40px;
+    margin: 15px 0;
+    color: #EAE5D9;
+}
+
+section h3 {
+    color: #8BA3A6;
+    margin-bottom: 15px;
+}
+
+/* HOME */
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.home img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #8BA3A6;
+}
+
+.home h1 {
+    font-size: 45px;
+}
+
+.home-text {
+    max-width: 650px;
+}
+
+/* ABOUT */
+#about {
+    min-height: auto;
+}
+
+.about-content {
+    max-width: 850px;
+}
+
+.about-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.9;
+}
+
+/* SKILLS */
+#skills {
+    min-height: auto;
+}
+
+.skills-intro {
+    max-width: 700px;
+    margin-bottom: 35px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+}
+
+.skill-card {
+    background: #34464D;
+    border: 1px solid #465B62;
+    border-radius: 8px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    border-color: #8BA3A6;
+    transform: translateY(-3px);
+}
+
+.skill-card h2 {
+    color: #8BA3A6;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    color: #C2CBC7;
+    line-height: 1.9;
+}
+
+/* PROJECTS */
+#projects {
+    min-height: auto;
+}
+
+#projects > p {
+    max-width: 800px;
+    font-size: 16px;
+}
+
+/* PROJECT SUBSECTION */
+.project-subsection {
+    margin-top: 50px;
+}
+
+.project-subsection h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #8BA3A6;
+}
+
+.project-subsection p {
+    max-width: 700px;
+    margin-bottom: 25px;
+}
+
+/* PHOTOGRAPHY GALLERY */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* INSTAGRAM MORE */
+.instagram-more {
+    display: inline-block;
+    margin-top: 25px;
+    color: #B49A7C;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.instagram-more:hover {
+    color: #EAE5D9;
+}
+
+/* CONTACTS */
+#contacts {
+    min-height: auto;
+}
+
+.contact-list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-list p {
+    font-size: 16px;
+}
+
+.contact-list a {
+    color: #B49A7C;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-list a:hover {
+    color: #EAE5D9;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        font-size: 12px;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .home h1 {
+        font-size: 30px;
+    }
+
+    section h1 {
+        font-size: 32px;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-card {
+        padding: 20px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photo-gallery img {
+        height: 180px;
+    }
 }
