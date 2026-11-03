@@ -1,0 +1,2 @@
+1. browser dapat mengenali href="#contacts"  dapat mengarahkan tampilan ke elemen <section id="contacts"> pada halaman yang sama karena href mengarahkan kode kembali ke section id yang bisa diclick untuk mencapai section tersebut
+2. saya menggunakan mailto agar bisa langsung di click dan masuk ke menu email untuk mengirimkan pesan dibanding langsung mencantumkan emailnya saja.

@@ -59,16 +59,20 @@ header {
     color: #8BA3A6;
 }
 
-/* NAVBAR */
-.navbar a {
-    color: #B9C2C0;
-    text-decoration: none;
-    font-size: 14px;
+/* NAVBAR UNDERLINE */
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: #8BA3A6;
     transition: 0.3s;
 }
 
-.navbar a:hover {
-    color: #8BA3A6;
+.navbar a:hover::after {
+    width: 100%;
 }
 
 /* SECTION */
